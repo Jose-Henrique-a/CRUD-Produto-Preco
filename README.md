@@ -3,6 +3,12 @@ Este projeto é um CRUD de produtos e preços que consume uma API externa hosped
 
 Link do projeto: https://crud-produto-preco.netlify.app/
 
+# api-Produto-Vercel
+Esta API em Node está hospedada no Vercel para ser consumida.
+
+Link da API: https://api-produto-vercel.vercel.app/
+
+
 ## Deploy do JSON Server na Vercel
 
 Um template para fazer o deploy do [JSON Server](https://github.com/typicode/json-server) na [Vercel](https://vercel.com) permite que você rode uma API REST fake (mock API) online!
