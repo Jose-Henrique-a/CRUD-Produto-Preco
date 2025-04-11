@@ -35,8 +35,8 @@ Demonstração deste repositório:
 ```
 
 ## Referências
-
-1. https://github.com/typicode/json-server
-2. https://vercel.com
-3. https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
-4. https://github.com/kitloong/json-server-vercel
+1. Professor Anderson Fontes : https://github.com/andersonfontes
+2. https://github.com/typicode/json-server
+3. https://vercel.com
+4. https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
+5. https://github.com/kitloong/json-server-vercel
