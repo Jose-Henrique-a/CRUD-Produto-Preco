@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, black, #0d2d67, #f01340, #f6bf90);
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+#output {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo da Tabela */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+td:last-child {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+td.preco {
+    text-align: right; /* Novo: alinhar preços à direita */
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilo dos Formulários */
+.div-cadastrar-inativo, .div-editar-inativo, .div-view-inativo {
+    display: none;
+}
+
+.div-cadastrar-ativo, .div-editar-ativo, .div-view-ativo {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    border-color: white;
+}
+
+input[readonly] {
+    background: rgba(255, 255, 255, 0.05);
+    cursor: not-allowed;
+}
+
+/* Botões */
+button, input[type="button"] {
+    padding: 12px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover, input[type="button"]:hover {
+    background-color: white;
+    color: #ff6a88;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Botões de Ação na Tabela */
+.btn-editar {
+    border-color: #ff9a44;
+}
+
+.btn-editar:hover {
+    background-color: #ff9a44;
+    color: white;
+}
+
+.btn-apagar {
+    border-color: #f45776;
+}
+
+.btn-apagar:hover {
+    background-color: #f45776;
+    color: white;
+}
+
+.btn-view {
+    border-color: #44ccff;
+}
+
+.btn-view:hover {
+    background-color: #44ccff;
+    color: white;
+}
+
+/* Estilos para mensagens de feedback */
+#mensagem-feedback {
+    display: none;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mensagem-sucesso {
+    background: rgba(40, 167, 69, 0.9); /* Verde */
+    color: white;
+}
+
+.mensagem-erro {
+    background: rgba(220, 53, 69, 0.9); /* Vermelho */
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    #output {
+        padding: 0 10px;
+    }
+
+    .tabela {
+        font-size: 0.9rem;
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+        min-width: 100px;
+    }
+
+    td:last-child {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    input, button, input[type="button"] {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .div-cadastrar-ativo, .div-editar-ativo, .div-view-ativo {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1rem;
+    }
+
+    .tabela {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    input, button, input[type="button"] {
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .div-cadastrar-ativo, .div-editar-ativo, .div-view-ativo {
+        padding: 12px;
+    }
+}
