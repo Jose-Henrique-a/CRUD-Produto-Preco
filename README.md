@@ -1,5 +1,6 @@
 # CRUD-Produto-Preco
 Este projeto é um CRUD de produtos e preços que consume uma API externa hospedada no Vercel.
+
 Link do projeto: https://crud-produto-preco.netlify.app/
 
 ## Deploy do JSON Server na Vercel
